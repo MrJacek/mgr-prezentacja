@@ -48,6 +48,9 @@
                     <p>
                         <small>Presentation powered by Reveal.js</small>
                     </p>
+                    <aside class="notes">
+                        Witam, nazwywam się Jacek Hojczak i zaprezentuje państwu moją prace dyplomową zatytułowaną "System synchronizacji i udostępniania planu imprezy sportowej".
+                    </aside>
                 </section>
 
                 <section>
@@ -64,8 +67,12 @@
                         <li >Testy systemu</li>
                         <li >Podsumowanie</li>
                     </ol>
+                    <aside class="notes">
+                        Wyświetlony slajd przedstawia agnde wedułg której poprowadze prezentacje. 
+                        Najpierw opowiem parę słów wstępu, następnie umotywuje swoją prace. Wymienie zastosowane technologie, przedstawie specyfikacje systemu
+                        Omuwie projetk systemu, najważniejsze moduły systemu, interfejs aplikacji klienckiej, testy oraz na koniec podsumuje pracę.
+                    </aside>
                 </section>
-
                 <section>
                     <section>
                         <h3> Wstęp</h3>
@@ -129,12 +136,12 @@
                     </ul>
                     <aside class="notes">
                         W projekcie wykorzystałem następujące technologie:
-                            JEE - java
-                            Jboss- server aplikacyjny
-                            postgres- baza danych
-                            web service rest - komunikacja
-                            android - aplikacja kliencka
-                        
+                        JEE - java
+                        Jboss- server aplikacyjny
+                        postgres- baza danych
+                        web service rest - komunikacja
+                        android - aplikacja kliencka
+
                     </aside>
                 </section>
 
@@ -151,7 +158,7 @@
                         <img alt="Użytkownik aplikacji" src="./images/AppUserUC.jpg"/>
                     </a>
                     <aside class="notes">
-                        Do stworzenia specyfikacji systemu zastosowałem przpadki urzycia w postaci diagramów UML
+                        Operacje udostępniane użytkownikowi aplikacji klienckiej to : wyświetlanie planu imprezy i synchronizacji/aktualizacja planu imprezy automatyczna i na żadanie.
                     </aside>
                 </section>
                 <section data-transition="linear">
@@ -160,7 +167,7 @@
                         <img alt="Aplikacja na Android" src="./images/AppUC.jpg"/>
                     </a>
                     <aside class="notes">
-                        Do stworzenia specyfikacji systemu zastosowałem przpadki urzycia w postaci diagramów UML
+                        Operacje wykonywane przez aplikacje kliencką automatycznie to wyświetlanie notyfikacji infromującej o potrzebie synchronizacji i zakonczonej synchronizacji.
                     </aside>
                 </section>
                 <section data-transition="linear">
@@ -169,17 +176,25 @@
                         <img  alt="Czyności dla organizatora" src="./images/ServerUC.jpg"/>
                     </a>
                     <aside class="notes">
-                        Do stworzenia specyfikacji systemu zastosowałem przpadki urzycia w postaci diagramów UML
+                        Dodawanie i usuwanie wydarzeni, dodawania i usuwanie lokalizacji.  
                     </aside>
                 </section>
                 <section>
                     <h3>Projekt systemu</h3>
+                    <aside class="notes">
+                        Teraz omówie projektu architektury systemu.
+                    </aside>
                 </section>
                 <section data-transition="linear">
-                    <h4>Schemat systemu</h4>
+                    <h4>Architektura systemu</h4>
                     <a href="#" class="image" >
                         <img  width="800" height="700" alt="Projekt systemu" src="./images/Project.jpg"/>
                     </a>
+                    <aside class="notes">
+                        System został zaprojektowany w architekturze klient-serwer. Jako protokuł komunikacji między klientem a serwerem wykorzystywany jest web-service typu REST.
+                        Po stronie klienta znajdują się moduły: komunikacji, synchronizacji oraz lokalna baza danych.
+                        Po stronie serwera znajdują się moduły: komunikacji, synchronizacji, serwer aplikacyjny jboss baza danych postgres, interfejs pgAmin
+                    </aside>
                 </section>
                 <section>
                     <h2>Moduł komunikacji</h2>
@@ -187,26 +202,28 @@
                         <li>komunikacja</li>
                         <li>share.jar</li>
                     </ul>
+                    <aside class="notes">
+                        Moduł komunikacji odpowiedzialny jest za wspóprace z serwisem GCM (Google Cloud Messeging) oraz przesyłanie planu imprezy z serwera do aplikacji klienckich.
+                        <p style="float: left">Share.jar umożliwia:</p>
+                        <ul>
+                            <li>zapisywanie poleceń sql w formacie json</li>
+                            <li>odczytywanie poleceń sql zapisanych w formacie json</li>
+                            <li>wykonanie poleceń sql przez interfejs jdbc</li>
+                        </ul>
+                    </aside>
                 </section>
                 <section data-transition="linear">
                     <img  width="800" height="700" alt="Flow 1" src="./images/workflow/1.png"/>
                 </section>
                 <section>
-                    <h3>Share.jar</h3>
-                    <p style="float: left">Umożliwia:</p>
-                    <ul>
-                        <li>zapisywanie poleceń sql w formacie json</li>
-                        <li>odczytywanie poleceń sql zapisanych w formacie json</li>
-                        <li>wykonanie poleceń sql przez interfejs jdbc</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Moduł synchronizacji</h2>
+                    <h3>Moduł synchronizacji</h3>
                     <ul>
                         <li>baza danych</li>
                         <li>sledzienie zmian</li>
                     </ul>
+                    <aside class="notes">
+                        Moduł synchronizacji opiera się na schemacie bazy danych oraz wyłuskiwaniu różnic pomiędzy wersjiami bazy.
+                    </aside>
                 </section>
                 <section data-transition="linear">
                     <h3>Schemat biznesowy</h3>
@@ -229,30 +246,54 @@
                     <img width="300" style="float: left" alt="allDatabase" src="./images/app/mainpage.png"/>
                     <img width="300" style="float: left" alt="allDatabase" src="./images/app/list.png"/>
                     <img width="300" style="float: left" alt="allDatabase" src="./images/app/map.png"/>
-
+                    <aside class="notes">
+                        Slajd przedstawia główny ekran aplikacji, widok planu imprezy, mapa googla z lokalizacją wydarzenia
+                    </aside>
                 </section>
                 <section data-transition="linear">
                     <img width="300" style="float: left" alt="allDatabase" src="./images/app/menu.png"/>
                     <img width="300" style="float: left" alt="allDatabase" src="./images/app/server_ip.png"/>
                     <img width="300" style="float: left" alt="allDatabase" src="./images/app/sync_duration.png"/>
+                    <aside class="notes">
+                        Slajd przedstawia główny ekran aplikacji, widok planu imprezy, mapa googla z lokalizacją wydarzenia
+                    </aside>
                 </section>
                 <section>
                     <h2>Testy systemu</h2>
                     <ul>
-                        <li>Modułu synchronizacji</li>
                         <li>Modułu komunikacji</li>
+                        <li>Modułu synchronizacji</li>
                     </ul>
-                </section>
-                <section data-transition="linear">
-                    <h3>Analiza testów</h3>
-                    <img alt="allDatabase" src="./images/test.png"/>
+                    <aside class="notes">
+                        Testy miały na celu sprawdzenie poprawności działania systemu oraz sprawdzenie wydajności sposobu komunikowania się międy aplikacjami klienckimi a serwerem.
+                        Testy komunikacji polegały na symulowaniu wielu aplikacji które wysyłaly żadanie synchronizacji do serwera.
+                        Testy synchronizacji polegały na dokonywaniu kolejnych zmian w planie imprezy i sprawdzaniu czy na aplikacji klienckiej pojawia się .
+                    </aside>
                 </section>
                 <section>
-                    <h2>Podusmowanie</h2>
-                    <ol>
+                    <h2>Podsumowanie</h2>
+                    <ul>
                         <li>osiągnięcie założonych celów</li>
                         <li>możliwości rozwoju</li>
-                    </ol>
+                    </ul>
+                    <aside class="notes">
+                        W przedstawionej pracy osiągnięto założony główny cel jakim było stworzenie systemu synchronizacji i udostępniania planu imprezy sportowej, a także zrealizowano następujące cele szczegółowe:
+                        <ol>
+                            <li>przesyłanie aktualnego planu imprezy na aplikację kliencką</li>
+                            <li>informowanie użytkownika, gdy plan imprezy uległ zmianie</li>
+                            <li>umożliwienie użytkownikowi aktualizację planu imprezy poprzez internet</li>
+                            <li>stworzenie projektu architektury modułu komunikacyjnego</li>
+                            <li>stworzenie projektu architektury modułu synchronizacji danych</li>
+                            <li>implementowanie projektu z wykorzystaniem narzędzi:</li>
+                            <li>Java EE</li>
+                            <li>JBoss AS</li>
+                            <li>PostgreSQL</li>
+                            <li>Java Android}</li>
+                            <li>Eclipse,</li>
+                            <li>wykonanie testów wydajności modułu komunikacji,</li>
+                            <li>wykonanie testów wydajności modułu synchronizacji danych.</li>
+                        </ol>
+                    </aside>
                 </section>
             </div>
         </div>

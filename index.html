@@ -3,10 +3,9 @@
 
     <head>
         <meta charset="utf-8">
+dsa
 
-        <title>System synchronizacji i udostępniania planu imprezy sportowej</title>
-
-        <meta name="description" content="Prezentacja systemu synchronizacji i udostępniania planu imprezy sportowej">
+        <title>Zintegrowane środowisko automatyzujące procesy wytwarzania oprogramowania w zespołach</title>        <meta name="description" content="Prezentacja zintegrowanego środowiska automatyzująceg procesy wytwarzania oprogramowania w zespołach">
         <meta name="author" content="Jacek Hojczak">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,7 +36,7 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h3>System synchronizacji i <br/>udostępniania planu imprezy sportowej</h3>                    
+                    <h3>Zintegrowane środowisko<br/> automatyzujące procesy <br/> wytwarzania oprogramowania w <br/>zespołach</h3>
                     <br/>
                     <p>
                         Jacek Hojczak
@@ -49,6 +48,8 @@
                         <small>Presentation powered by Reveal.js</small>
                     </p>
                     <aside class="notes">
+
+
                         Witam, nazwywam się Jacek Hojczak i zaprezentuje państwu moją prace dyplomową zatytułowaną "System synchronizacji i udostępniania planu imprezy sportowej".
                     </aside>
                 </section>
@@ -58,19 +59,16 @@
                     <ol>
                         <li >Wstęp</li>
                         <li >Motywacja</li>
-                        <li >Zastosowane technologie</li>
-                        <li >Specyfikacja systemu</li>
-                        <li >Projekt systemu</li>
-                        <li >Moduł komunikacji</li>
-                        <li >Moduł synchronizacji danych</li>
-                        <li >Interfejs graficzny</li>
-                        <li >Testy systemu</li>
+                        <li >Kryteria doboru narzędzi</li>
+                        <li >Analiza narzędzi</li>
+                        <li >Integracja narzędzi</li>
+                        <li >Testy kompatybilności</li>
                         <li >Podsumowanie</li>
                     </ol>
                     <aside class="notes">
                         Wyświetlony slajd przedstawia agnde wedułg której poprowadze prezentacje. 
-                        Najpierw opowiem parę słów wstępu, następnie umotywuje swoją prace. Wymienie zastosowane technologie, przedstawie specyfikacje systemu
-                        Omuwie projetk systemu, najważniejsze moduły systemu, interfejs aplikacji klienckiej, testy oraz na koniec podsumuje pracę.
+                        Najpierw opowiem parę słów wstępu, następnie umotywuje swoją prace. Wymienie zastosowane technologie, przedstawie kryteria jakimi się kierowałem odbierając narzędzia,
+                        Omuwie kategorie narzędzi, zarprezentuje projekt integracji narzędzi w system systemu,testy oraz na koniec podsumuje pracę.
                     </aside>
                 </section>
                 <section>
@@ -79,11 +77,11 @@
                         <br/>
                         <ul>
                             <li>
-                                Plan imprezy sportowej
+                                Procesy wytwarzania oprogramowania
                             </li>
 
                             <li>
-                                Sposoby udostępniania planu imprezy sportowej
+                                Automatyzacja
                             </li>
 
                             <li>
@@ -111,7 +109,8 @@
                 <section >
                     <h2>Motywacja</h2>
                     <ul>
-                        <li>Alternatywa dla stron internetowych</li>
+                        <li>Alternatywa dla małych i średnich firm</li>
+                        <li>Z minimalizowanie czasu poświęconego na<br/> pracę "wokół produktu"</li>
                         <li>Open Source</li>
                     </ul> 
                     <aside class="notes">
@@ -126,13 +125,13 @@
                     </aside>
                 </section>
                 <section>
-                    <h2>Technologie</h2>
+                    <h2>Kryteria doboru narzędzi</h2>
                     <ul>
-                        <li>Java Enterprise Edition</li>
-                        <li>JBoss</li>
-                        <li>Postgres</li>
-                        <li>Web service REST</li>
-                        <li>Android</li>
+                        <li>Open Source</li>
+                        <li>Linux</li>
+                        <li>Self-hosted</li>
+                        <li>Możliwość integracji z ekosystemem firmy tzn. LDAP(AD),email </li>
+                        <li>Wsparcie</li>
                     </ul>
                     <aside class="notes">
                         W projekcie wykorzystałem następujące technologie:
@@ -146,49 +145,100 @@
                 </section>
 
                 <section>
-                    <h2>Specyfikacja systemu</h2>
-                    <p>UML- usecase</p>
+                    <h2>Analiza narzędzi</h2>
+                    <p>Wedułg funkcji narzędzi</p>
+                    <ul>
+                        <li>Repozytorium kodu źródłowego</li>
+                        <li>Przegląd kodu/zarządzanie kodem</li>
+                        <li>Ciągła integracja (CI)</li>
+                        <li>Repozytorium binariów</li>
+                    </ul>
                     <aside class="notes">
                         Do stworzenia specyfikacji systemu zastosowałem przpadki urzycia w postaci diagramów UML
                     </aside>
                 </section>  
                 <section data-transition="linear">
-                    <h4>Operacje udostępnione użytkownikowi</h4>
-                    <a href="#" class="image" >
-                        <img alt="Użytkownik aplikacji" src="./images/AppUserUC.jpg"/>
+                    <h4>Repozytorium kodu źródłowego</h4>
+
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/mercurial-logo.png"  width="20%" height="20%"/>
                     </a>
+                    <a  href="#" class="image" >
+                        <img float="left" alt="Użytkownik aplikacji" src="./images/git-logo.jpg"  width="30%" height="30%"/>
+                    </a>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/svn-logo.png"  width="20%" height="20%"/>
+                    </a>
+
+
                     <aside class="notes">
                         Operacje udostępniane użytkownikowi aplikacji klienckiej to : wyświetlanie planu imprezy i synchronizacji/aktualizacja planu imprezy automatyczna i na żadanie.
                     </aside>
                 </section>
                 <section data-transition="linear">
-                    <h4>Operacje wykonywane automatycznie przez aplikacje kliencką</h4>
-                    <a href="#" class="image" >
-                        <img alt="Aplikacja na Android" src="./images/AppUC.jpg"/>
+                    <h4>Przegląd kodu/zarządzanie kodem</h4>
+
+                    <div>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/gitbucket-logo.png"  width="30%" height="30%"/>
                     </a>
+                    <a  href="#" class="image" >
+                        <img float="left" alt="Użytkownik aplikacji" src="./images/gitlab-logo.png"  width="30%" height="30%"/>
+                    </a>
+                    </div>
+                    <div>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/phabricator-logo.png"  width="30%" height="30%"/>
+                    </a>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/gerrit-log.jpg"  width="20%" height="20%"/>
+                    </a>
+                    </div>
+
                     <aside class="notes">
                         Operacje wykonywane przez aplikacje kliencką automatycznie to wyświetlanie notyfikacji infromującej o potrzebie synchronizacji i zakonczonej synchronizacji.
                     </aside>
                 </section>
                 <section data-transition="linear">
-                    <h4>Operacje udostępnione organizatorowi</h4>
-                    <a href="#" class="image" >
-                        <img  alt="Czyności dla organizatora" src="./images/ServerUC.jpg"/>
+                    <h4>Ciągła integracja i ciągłe dostarczanie (CI/CD)</h4>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/jenkins-logo.jpg"  width="20%" height="20%"/>
+                    </a>
+                    <a  href="#" class="image" >
+                        <img float="left" alt="Użytkownik aplikacji" src="./images/gocd-logo.png"  width="30%" height="30%"/>
+                    </a>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/strider-cd-logo.png"  width="20%" height="20%"/>
                     </a>
                     <aside class="notes">
                         Dodawanie i usuwanie wydarzeni, dodawania i usuwanie lokalizacji.  
                     </aside>
                 </section>
+                <section data-transition="linear">
+                    <h4>Repozytorium binariów</h4>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/nexus-logo.png"  width="20%" height="20%"/>
+                    </a>
+                    <a  href="#" class="image" >
+                        <img float="left" alt="Użytkownik aplikacji" src="./images/archiva-logo.png"  width="30%" height="30%"/>
+                    </a>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/artifactory-logo.png"  width="20%" height="20%"/>
+                    </a>
+                    <aside class="notes">
+                        Dodawanie i usuwanie wydarzeni, dodawania i usuwanie lokalizacji.
+                    </aside>
+                </section>
                 <section>
-                    <h3>Projekt systemu</h3>
+                    <h3>Integracja narzędzi</h3>
                     <aside class="notes">
                         Teraz omówie projektu architektury systemu.
                     </aside>
                 </section>
                 <section data-transition="linear">
-                    <h4>Architektura systemu</h4>
+                    <h4>Docker</h4>
                     <a href="#" class="image" >
-                        <img  width="800" height="700" alt="Projekt systemu" src="./images/Project.jpg"/>
+                        <img  alt="Projekt systemu" src="./images/docker-logo.jpg"/>
                     </a>
                     <aside class="notes">
                         System został zaprojektowany w architekturze klient-serwer. Jako protokuł komunikacji między klientem a serwerem wykorzystywany jest web-service typu REST.
@@ -197,10 +247,11 @@
                     </aside>
                 </section>
                 <section>
-                    <h2>Moduł komunikacji</h2>
+                    <h4>konfiguracja środowiska za pomocą narzędzi</h4>
                     <ul>
-                        <li>protokół</li>
-                        <li>share.jar</li>
+                        <li>bash</li>
+                        <li>docker-compose</li>
+                        <li>saltstack?</li>
                     </ul>
                     <aside class="notes">
                         Moduł komunikacji odpowiedzialny jest za wspóprace z serwisem GCM (Google Cloud Messeging) oraz przesyłanie planu imprezy z serwera do aplikacji klienckich.
@@ -211,58 +262,15 @@
                             <li>wykonanie poleceń sql przez interfejs jdbc</li>
                         </ul>
                     </aside>
-                </section>
-                <section data-transition="linear">
-                    <img  width="800" height="700" alt="Flow 1" src="./images/workflow/1.png"/>
-                </section>
+                    </section>
                 <section>
-                    <h3>Moduł synchronizacji</h3>
+                    <h2>Testy kompatybilności</h2>
+                    <p>Różne dystrybucje linuxa</p>
                     <ul>
-                        <li>baza danych</li>
-                        <li>sledzienie zmian</li>
-                    </ul>
-                    <aside class="notes">
-                        Moduł synchronizacji opiera się na schemacie bazy danych oraz wyłuskiwaniu różnic pomiędzy wersjiami bazy.
-                    </aside>
-                </section>
-                <section data-transition="linear">
-                    <h3>Schemat biznesowy</h3>
-                    <img  alt="bussinesLayer" src="./images/bussinesLayer.png"/>
-                </section>
-                <section data-transition="linear">
-                    <h3>Meta-dane</h3>
-                    <img alt="allDatabase" src="./images/allDatabase.png"/>
-                </section>
-                <section>
-                    <h2>Interfejs graficzny</h2>
-                    <ul>
-                        <li>android SDK</li>
-                        <li>przejrzysty</li>
-                        <li>prosty w obsłudze</li>
-                    </ul>
-                </section>
-
-                <section data-transition="linear">
-                    <img width="300" style="float: left" alt="allDatabase" src="./images/app/mainpage.png"/>
-                    <img width="300" style="float: left" alt="allDatabase" src="./images/app/list.png"/>
-                    <img width="300" style="float: left" alt="allDatabase" src="./images/app/map.png"/>
-                    <aside class="notes">
-                        Slajd przedstawia główny ekran aplikacji, widok planu imprezy, mapa googla z lokalizacją wydarzenia
-                    </aside>
-                </section>
-                <section data-transition="linear">
-                    <img width="300"  alt="allDatabase" src="./images/app/menu.png"/>
-                    <img width="300"  alt="allDatabase" src="./images/app/server_ip.png"/>
-                    <!--<img width="300" style="float: left" alt="allDatabase" src="./images/app/sync_duration.png"/>-->
-                    <aside class="notes">
-                        Slajd przedstawia główny ekran aplikacji, widok planu imprezy, mapa googla z lokalizacją wydarzenia
-                    </aside>
-                </section>
-                <section>
-                    <h2>Testy systemu</h2>
-                    <ul>
-                        <li>Modułu komunikacji</li>
-                        <li>Modułu synchronizacji</li>
+                        <li>Fedora</li>
+                        <li>CentOS</li>
+                        <li>Ubuntu</li>
+                        <li>Debian</li>
                     </ul>
                     <aside class="notes">
                         Testy miały na celu sprawdzenie poprawności działania systemu oraz sprawdzenie wydajności sposobu komunikowania się międy aplikacjami klienckimi a serwerem.

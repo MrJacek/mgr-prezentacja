@@ -3,7 +3,6 @@
 
     <head>
         <meta charset="utf-8">
-dsa
 
         <title>Zintegrowane środowisko automatyzujące procesy wytwarzania oprogramowania w zespołach</title>        <meta name="description" content="Prezentacja zintegrowanego środowiska automatyzująceg procesy wytwarzania oprogramowania w zespołach">
         <meta name="author" content="Jacek Hojczak">
@@ -36,7 +35,7 @@ dsa
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h3>Zintegrowane środowisko<br/> automatyzujące procesy <br/> wytwarzania oprogramowania w <br/>zespołach</h3>
+                    <h3>Zintegrowane środowisko<br/> automatyzujące procesy wytwarzania  <br/>  oprogramowania <br/> w zespołach</h3>
                     <br/>
                     <p>
                         Jacek Hojczak
@@ -76,36 +75,89 @@ dsa
                         <h3> Wstęp</h3>
                         <br/>
                         <ul>
+							<li>
+                                Cele pracy
+                            </li>
                             <li>
                                 Procesy wytwarzania oprogramowania
                             </li>
-
                             <li>
                                 Automatyzacja
                             </li>
-
-                            <li>
-                                Cele pracy
-                            </li>
                         </ul>
                         <aside class="notes">
-                            <p>
-                                Chronoligiczny spis wydarzeń które składają się na plan imprezy.
-                                Pojedyńcze wydarzenie składa się z: opisu,miejsca oraz daty rozpoczęcia i zakończenia.
-                                Udostępnienie uczestnikom planu imprezy jest wymogiem prawnym w Polsce.
-                            </p>
-                            <p>Najczęsciej do udostępniania planu stosowane są strony internetowe.
-                            <p>Główny celem pracy było stworzenie systemu udostępniania planu nie wykorzystującego stron internetowych.</p>
-                            Celame dodatkowymi stanowiły:
-                            <ol>
-                                <li>Stworzenie specyfikacji systemu</li>
-                                <li>Stworzenie projektu architektury</li>
-                                <li>Implementacja projektu z urzyciem wybranych technologi</li>
-                                <li>Wykonanie testów</li>
-                            </ol>
+                       
                         </aside>
                     </section>
                 </section>
+                 <section>
+					<section>
+                        <h3>Cele pracy</h3>
+                        
+                        <br/>
+                        <ul>
+						<li class="fragment" ><b><u>Projekt i implementacja integracji środowiska automatyzującego procesy wytwarzania w zespołach</u></b></li>	
+						<ul>
+							<li class="fragment">wyszczególnienie procesów występujących w trakcie wytwarzania oprogramowania,</li>
+							<li class="fragment">analiza dostępnych narzędzi automatyzujących wyszczególnione procesy wytwarzania oprogramowania,</li>
+							<li class="fragment">zaprojektowanie sposobu integracji wybranych narzędzi w środowisko</li>
+							</ul>
+                        </ul>
+                    </section>
+                    <section>                  
+							<a   href="#" class="image" >
+								<img float="left" alt="Użytkownik aplikacji" src="./images/process-5.jpeg"  width="80%" height="80%" />
+							</a>
+                    </section>
+                </section>
+                <section>
+					<section>
+                        <h3>Procesy wytwarzania <br/> oprogramowania</h3>
+                        <br/>
+                        <h4 class="fragment">Ciągła Integracja</h4>
+                        <br/>
+                        <h4 class="fragment">Ciągłe Dostarczanie</h4>
+                    </section>
+                </section>
+                
+                <section>                  
+					<h3 class"fragment current-visible" >Ciągła Integracja</h3>
+							<a   href="#" class="image" >
+								<img class"fragment current-visible" float="left" alt="Użytkownik aplikacji" src="./images/process-5.jpeg"  width="80%" height="80%" />
+							</a>
+                    </section>
+                     <aside class="notes">
+                          <ul>
+                            <li>
+							
+                                Tworzenie kodu.
+                            </li>
+                            <li>
+                                Testy jednostkowe.
+                            </li>
+                              <li>
+                                Analiza pokrycia testami.
+                            </li>
+                            <li>
+                                Analiza statyczna kodu.
+                            </li>
+                            <li>
+                                Testy integracyjne.
+                            </li>
+                            <li>
+								Przegląd kodu przez innych członków zespołu.
+                            </li>
+                            <li>
+								Scalenie kodu z główną gałęzią kodu.
+                            </li>
+                            <li>
+								Inne testy.
+                            </li>
+                            <li>
+								Wdrożenie na środowiska pośrednie a potem produkcyjne.
+                            </li>
+                        </ul>
+                        </aside>
                 <section >
                     <h2>Motywacja</h2>
                     <ul>
@@ -114,14 +166,7 @@ dsa
                         <li>Open Source</li>
                     </ul> 
                     <aside class="notes">
-                        <p>
-                            Motywacją do stworzenia takiego systemu stanowiła niedogodność - gdy uczestnik chcący być na bieżąco z planem imprezy musiał zapoznawana się z treścią strony.
-                            W przypadku zaistnienia zmian w planie, uczestnik nie był automatycznie o tym poinformowany.
-                            System będący wynikiem tej pracy automatycznie infromuje uczestników o zmianach w planie.
-                        </p>
-                        <p>
-                            Obeceni insteją podobne systemy ale żeden z nich nie jest bezpłatny dla tego stworzony system jest udostępniony na licencji GPL.
-                        </p>
+                   
                     </aside>
                 </section>
                 <section>
@@ -134,13 +179,7 @@ dsa
                         <li>Wsparcie</li>
                     </ul>
                     <aside class="notes">
-                        W projekcie wykorzystałem następujące technologie:
-                        JEE - java
-                        Jboss- server aplikacyjny
-                        postgres- baza danych
-                        web service rest - komunikacja
-                        android - aplikacja kliencka
-
+ 
                     </aside>
                 </section>
 
@@ -154,7 +193,6 @@ dsa
                         <li>Repozytorium binariów</li>
                     </ul>
                     <aside class="notes">
-                        Do stworzenia specyfikacji systemu zastosowałem przpadki urzycia w postaci diagramów UML
                     </aside>
                 </section>  
                 <section data-transition="linear">
@@ -170,9 +208,7 @@ dsa
                         <img float="right" alt="Użytkownik aplikacji" src="./images/svn-logo.png"  width="20%" height="20%"/>
                     </a>
 
-
                     <aside class="notes">
-                        Operacje udostępniane użytkownikowi aplikacji klienckiej to : wyświetlanie planu imprezy i synchronizacji/aktualizacja planu imprezy automatyczna i na żadanie.
                     </aside>
                 </section>
                 <section data-transition="linear">
@@ -180,15 +216,12 @@ dsa
 
                     <div>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/gitbucket-logo.png"  width="30%" height="30%"/>
-                    </a>
-                    <a  href="#" class="image" >
                         <img float="left" alt="Użytkownik aplikacji" src="./images/gitlab-logo.png"  width="30%" height="30%"/>
                     </a>
                     </div>
                     <div>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/phabricator-logo.png"  width="30%" height="30%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/logo-kall.jpg"  width="30%" height="30%"/>
                     </a>
                     <a  href="#" class="image" >
                         <img float="right" alt="Użytkownik aplikacji" src="./images/gerrit-log.jpg"  width="20%" height="20%"/>
@@ -202,13 +235,13 @@ dsa
                 <section data-transition="linear">
                     <h4>Ciągła integracja i ciągłe dostarczanie (CI/CD)</h4>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/jenkins-logo.jpg"  width="20%" height="20%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/jenkins-logo.jpg"  width="40%" height="40%"/>
                     </a>
                     <a  href="#" class="image" >
                         <img float="left" alt="Użytkownik aplikacji" src="./images/gocd-logo.png"  width="30%" height="30%"/>
                     </a>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/strider-cd-logo.png"  width="20%" height="20%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/gitlabci-logo.jpg"  width="30%" height="30%"/>
                     </a>
                     <aside class="notes">
                         Dodawanie i usuwanie wydarzeni, dodawania i usuwanie lokalizacji.  
@@ -217,13 +250,11 @@ dsa
                 <section data-transition="linear">
                     <h4>Repozytorium binariów</h4>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/nexus-logo.png"  width="20%" height="20%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/nexus-logo.png"  width="40%" height="40%"/>
+                    </a>
                     </a>
                     <a  href="#" class="image" >
-                        <img float="left" alt="Użytkownik aplikacji" src="./images/archiva-logo.png"  width="30%" height="30%"/>
-                    </a>
-                    <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/artifactory-logo.png"  width="20%" height="20%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/artifactory-logo.png"  width="30%" height="30%"/>
                     </a>
                     <aside class="notes">
                         Dodawanie i usuwanie wydarzeni, dodawania i usuwanie lokalizacji.
@@ -236,23 +267,17 @@ dsa
                     </aside>
                 </section>
                 <section data-transition="linear">
-                    <h4>Docker</h4>
                     <a href="#" class="image" >
-                        <img  alt="Projekt systemu" src="./images/docker-logo.jpg"/>
+                        <img  alt="Projekt systemu" src="./images/SaltStack.jpg"/>
                     </a>
                     <aside class="notes">
-                        System został zaprojektowany w architekturze klient-serwer. Jako protokuł komunikacji między klientem a serwerem wykorzystywany jest web-service typu REST.
-                        Po stronie klienta znajdują się moduły: komunikacji, synchronizacji oraz lokalna baza danych.
-                        Po stronie serwera znajdują się moduły: komunikacji, synchronizacji, serwer aplikacyjny jboss baza danych postgres, interfejs pgAmin
+                       dekodko
                     </aside>
                 </section>
                 <section>
-                    <h4>konfiguracja środowiska za pomocą narzędzi</h4>
-                    <ul>
-                        <li>bash</li>
-                        <li>docker-compose</li>
-                        <li>saltstack?</li>
-                    </ul>
+                    <a href="#" class="image" >
+                        <img  alt="Projekt systemu" src="./images/salt-arc	h.jpg"/>
+                    </a>
                     <aside class="notes">
                         Moduł komunikacji odpowiedzialny jest za wspóprace z serwisem GCM (Google Cloud Messeging) oraz przesyłanie planu imprezy z serwera do aplikacji klienckich.
                         <p style="float: left">Share.jar umożliwia:</p>
@@ -267,10 +292,10 @@ dsa
                     <h2>Testy kompatybilności</h2>
                     <p>Różne dystrybucje linuxa</p>
                     <ul>
-                        <li>Fedora</li>
-                        <li>CentOS</li>
-                        <li>Ubuntu</li>
-                        <li>Debian</li>
+                        <li>Ubuntu 12.04</li>
+                        <li>Ubuntu 14.04</li>
+                        <li>CentOS 6.6</li>
+                        <li>CentOS 7.0</li>
                     </ul>
                     <aside class="notes">
                         Testy miały na celu sprawdzenie poprawności działania systemu oraz sprawdzenie wydajności sposobu komunikowania się międy aplikacjami klienckimi a serwerem.

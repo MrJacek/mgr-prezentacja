@@ -187,10 +187,11 @@
                         <li>Linux</li>
                         <li>Self-hosted</li>
                         <li>Możliwość integracji z ekosystemem firmy tzn. LDAP (AD), email </li>
-                        <li>Wsparcie</li>
+                        <li>Aktywna społeczność</li>
                     </ul>
                     <aside class="notes">
- 
+						Wszystkie narzędzie które zostały podane analize musiały spełniać wyszczególnione na prezentacji kryteria.
+						Spełnienie tych kryteriów przez narzędzie umożliwiało użycie go w projekcie bez ponoszenia żadnych kosztów.
                     </aside>
                 </section>
 
@@ -200,22 +201,27 @@
                         <li>Repozytorium kodu źródłowego</li>
                         <li>Przegląd kodu/zarządzanie kodem</li>
                         <li>Ciągła integracja (CI)</li>
+                        <li>Analiza kodu</li>
                         <li>Repozytorium binariów</li>
                     </ul>
                     <aside class="notes">
+						
+						
                     </aside>
                 </section>  
                 <section data-transition="linear">
                     <h4>Repozytorium kodu źródłowego</h4>
 
-                    <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/mercurial-logo.png"  width="20%" height="20%"/>
-                    </a>
-                    <a  href="#" class="image" >
+<a  href="#" class="image" >
                         <img float="left" alt="Użytkownik aplikacji" src="./images/git-logo.jpg"  width="30%" height="30%"/>
                     </a>
+                    <br/>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/svn-logo.png"  width="20%" height="20%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/mercurial-logo.png"  width="15%" height="15%"/>
+                    </a>
+                    
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/svn-logo.png"  width="15%" height="15%"/>
                     </a>
 
                     <aside class="notes">
@@ -230,8 +236,9 @@
                     </a>
                     </div>
                     <div>
+					<br/>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/logo-kall.jpg"  width="30%" height="30%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/logo-kall.jpg"  width="20%" height="20%"/>
                     </a>
                     <a  href="#" class="image" >
                         <img float="right" alt="Użytkownik aplikacji" src="./images/gerrit-log.jpg"  width="20%" height="20%"/>
@@ -245,31 +252,60 @@
                 <section data-transition="linear">
                     <h4>Ciągła integracja i ciągłe dostarczanie (CI/CD)</h4>
                     <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/gitlabci-logo.jpg"  width="30%" height="30%"/>
+                                            
+                    </a>
+                    <br/>
+					Gitlab CI
+                    <br/>
+                    <a  href="#" class="image" >
                         <img float="right" alt="Użytkownik aplikacji" src="./images/jenkins-logo.jpg"  width="40%" height="40%"/>
                     </a>
                     <a  href="#" class="image" >
                         <img float="left" alt="Użytkownik aplikacji" src="./images/gocd-logo.png"  width="30%" height="30%"/>
                     </a>
+
+                    <aside class="notes">
+                   
+                    </aside>
+                </section>
+                                
+                <section data-transition="linear">
+                 <h4>Analiza kodu</h4>
                     <a  href="#" class="image" >
-                        <img float="right" alt="Użytkownik aplikacji" src="./images/gitlabci-logo.jpg"  width="30%" height="30%"/>
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/sonar-logo.png"  width="40%" height="40%"/>
+                    </a>
+                    <br/>
+                    </a>
+                    <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/checkstyle-logo.jpg"  width="20%" height="20%"/>
+                    </a>
+                                        <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/pmd-logo.jpg"  width="15%" height="15%"/>
+                    </a>
+                                        <a  href="#" class="image" >
+                        <img float="right" alt="Użytkownik aplikacji" src="./images/findbug-logo.png"  width="10%" height="10%"/>
                     </a>
                     <aside class="notes">
-                        Dodawanie i usuwanie wydarzeni, dodawania i usuwanie lokalizacji.  
+                   
                     </aside>
                 </section>
                 <section data-transition="linear">
                     <h4>Repozytorium binariów</h4>
+                    
                     <a  href="#" class="image" >
                         <img float="right" alt="Użytkownik aplikacji" src="./images/nexus-logo.png"  width="40%" height="40%"/>
                     </a>
+                    <br/>
                     </a>
                     <a  href="#" class="image" >
                         <img float="right" alt="Użytkownik aplikacji" src="./images/artifactory-logo.png"  width="30%" height="30%"/>
                     </a>
                     <aside class="notes">
-                        Dodawanie i usuwanie wydarzeni, dodawania i usuwanie lokalizacji.
+                   
                     </aside>
                 </section>
+
                 <section>
                     <h3>Integracja narzędzi</h3>
                     <aside class="notes">
@@ -318,21 +354,13 @@
                         <li>możliwości rozwoju</li>
                     </ul>
                     <aside class="notes">
-                        W przedstawionej pracy osiągnięto założony główny cel jakim było stworzenie systemu synchronizacji i udostępniania planu imprezy sportowej, a także zrealizowano następujące cele szczegółowe:
+                        W przedstawionej pracy osiągnięto założony główny cel jakim było stworzenie zintegrowanego środowiska automatyzującego procesy wytwarzania oprogramowania w zespołach,<br/>a także zrealizowano następujące cele szczegółowe:
                         <ol>
-                            <li>przesyłanie aktualnego planu imprezy na aplikację kliencką</li>
-                            <li>informowanie użytkownika, gdy plan imprezy uległ zmianie</li>
-                            <li>umożliwienie użytkownikowi aktualizację planu imprezy poprzez internet</li>
-                            <li>stworzenie projektu architektury modułu komunikacyjnego</li>
-                            <li>stworzenie projektu architektury modułu synchronizacji danych</li>
-                            <li>implementowanie projektu z wykorzystaniem narzędzi:</li>
-                            <li>Java EE</li>
-                            <li>JBoss AS</li>
-                            <li>PostgreSQL</li>
-                            <li>Java Android}</li>
-                            <li>Eclipse,</li>
-                            <li>wykonanie testów wydajności modułu komunikacji,</li>
-                            <li>wykonanie testów wydajności modułu synchronizacji danych.</li>
+							<li>zdefiniowano procesy występujące w trakcie wytwarzania oprogramowania</li>
+                            <li>przeprowadzono analizę dostępnych narzędzi</li>
+                            <li>umoliżwiono łatwą instalację systemu za pomocą technologi saltstack</li>
+                            <li>przeprowadzono testy kompatybilności z różnymi systemami operacyjnymi	x</li>
+                            
                         </ol>
                     </aside>
                 </section>

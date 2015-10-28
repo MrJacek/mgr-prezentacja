@@ -49,7 +49,7 @@
                     <aside class="notes">
 
 
-                        Witam, nazwywam się Jacek Hojczak i zaprezentuje państwu moją prace dyplomową zatytułowaną "System synchronizacji i udostępniania planu imprezy sportowej".
+                        Witam, nazwywam się Jacek Hojczak i zaprezentuje państwu moją prace dyplomową zatytułowaną "Zintegrowane środowisko automatyzujące procesy wytwarzania oprogramowania w zespołach".	
                     </aside>
                 </section>
 
@@ -66,8 +66,10 @@
                     </ol>
                     <aside class="notes">
                         Wyświetlony slajd przedstawia agnde wedułg której poprowadze prezentacje. 
-                        Najpierw opowiem parę słów wstępu, następnie umotywuje swoją prace. Wymienie zastosowane technologie, przedstawie kryteria jakimi się kierowałem odbierając narzędzia,
-                        Omuwie kategorie narzędzi, zarprezentuje projekt integracji narzędzi w system systemu,testy oraz na koniec podsumuje pracę.
+                        Najpierw opowiem parę słów wstępu, następnie umotywuje swoją prace. 
+                        Omuwie kryteria wedułg których zostały wybierane narzędzia do z analizowania
+                        Przedstawie sposób w jaki narzędzia były analizowane oraz w jaki sposób zostały one zintegrowane w jedno środowisko.
+                        Na koniec omówie testy jakimi zostało podanne stworzone środowisko i podsumuje swoją pracę.                         
                     </aside>
                 </section>
                 <section>
@@ -81,12 +83,10 @@
                             <li>
                                 Procesy wytwarzania oprogramowania
                             </li>
-                            <li>
-                                Automatyzacja
-                            </li>
+
                         </ul>
                         <aside class="notes">
-                       
+							W wstępie przypomnę cele pracy i wyjasnię jakie procesy wytwarzania oprogramowania zostały wzięte pod uwagę w pracy oraz 
                         </aside>
                     </section>
                 </section>
@@ -104,22 +104,33 @@
 							</ul>
                         </ul>
                     </section>
-                    <section>                  
-							<a   href="#" class="image" >
-								<img float="left" alt="Użytkownik aplikacji" src="./images/process-5.jpeg"  width="80%" height="80%" />
-							</a>
-                    </section>
                 </section>
-                <section>
-					<section>
+				<section>
                         <h3>Procesy wytwarzania <br/> oprogramowania</h3>
                         <br/>
                         <h4 class="fragment">Ciągła Integracja</h4>
                         <br/>
                         <h4 class="fragment">Ciągłe Dostarczanie</h4>
+                           <aside class="notes">
+							Ciągła Integracja:
+							Praktyka stosowana w trakcie rozwoju oprogramowania <br/>
+							Polega na częsty i regularnym dołączaniu zmian kodu do głównego repozytorium <br/>
+							Wymaga od programistów dyscypliny i umiejętności pisania testów automatycznych <br/>
+							Zakłada że kod w głownym repozytorium jest zawsze działający a jeśli nie jest zespół na tychmiast stara się go naprawić <br/>
+							<br/>
+							Ciągła Dostarczanie:<br/>
+							Rosrzeżenie pratyki ciągłej integracji<br/>
+							Ponadto przeniesienie oprogramowania z repozytorium głównego na prod i uruchominie go wymaga tylko prostej akceptacji manulanej<br/>
+							Reszta zadań takich jak,<br/>
+							stworzenie nowej wersji,<br/>
+							konfiguracja środowiska,<br/>
+							wdrożenie nowej wersji,<br/>
+							stworzenie kopi zapasowych<br/>
+							Odbywa się automatycznie<br/>
+							<br/>
+							
+                    </aside>
                     </section>
-                </section>
-                
                 <section>                  
 					<h3 class"fragment current-visible" >Ciągła Integracja</h3>
 							<a   href="#" class="image" >
@@ -162,7 +173,7 @@
                     <h2>Motywacja</h2>
                     <ul>
                         <li>Alternatywa dla małych i średnich firm</li>
-                        <li>Z minimalizowanie czasu poświęconego na<br/> pracę "wokół produktu"</li>
+                        <li>Zminimalizowanie czasu poświęconego na<br/> pracę "wokół produktu"</li>
                         <li>Open Source</li>
                     </ul> 
                     <aside class="notes">
@@ -175,7 +186,7 @@
                         <li>Open Source</li>
                         <li>Linux</li>
                         <li>Self-hosted</li>
-                        <li>Możliwość integracji z ekosystemem firmy tzn. LDAP(AD),email </li>
+                        <li>Możliwość integracji z ekosystemem firmy tzn. LDAP (AD), email </li>
                         <li>Wsparcie</li>
                     </ul>
                     <aside class="notes">
@@ -185,7 +196,6 @@
 
                 <section>
                     <h2>Analiza narzędzi</h2>
-                    <p>Wedułg funkcji narzędzi</p>
                     <ul>
                         <li>Repozytorium kodu źródłowego</li>
                         <li>Przegląd kodu/zarządzanie kodem</li>
@@ -289,8 +299,8 @@
                     </aside>
                     </section>
                 <section>
-                    <h2>Testy kompatybilności</h2>
-                    <p>Różne dystrybucje linuxa</p>
+                    <h2>Testy <br/> kompatybilności</h2>
+                    
                     <ul>
                         <li>Ubuntu 12.04</li>
                         <li>Ubuntu 14.04</li>
@@ -298,9 +308,7 @@
                         <li>CentOS 7.0</li>
                     </ul>
                     <aside class="notes">
-                        Testy miały na celu sprawdzenie poprawności działania systemu oraz sprawdzenie wydajności sposobu komunikowania się międy aplikacjami klienckimi a serwerem.
-                        Testy komunikacji polegały na symulowaniu wielu aplikacji które wysyłaly żadanie synchronizacji do serwera.
-                        Testy synchronizacji polegały na dokonywaniu kolejnych zmian w planie imprezy i sprawdzaniu czy na aplikacji klienckiej pojawia się .
+                    Różne dystrybucje linuxa
                     </aside>
                 </section>
                 <section>
